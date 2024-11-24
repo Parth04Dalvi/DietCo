@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietCo Nutrition Plans</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <header class="navbar">
+        <img src="DietCo.png">
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="nutritionalplan.html">Plans</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+                <li><a href="Quesionaire.html">Questionaire</a></li>
+                <li><a href="api_explore.html">Nutrition Information</a></li>
+            </ul>
+        </nav>
+    </header> -->
+    <body>
+        <div class="container">
+            <video src="vecteezy_young-man-looking-apple-with-shopping-cart-on-alpha-channel_36557485.mp4"
+                class="slider" autoplay loop muted>
+            </video>
+            <ul>
+                <li onclick="videoslider('vecteezy_comparison-junk-food-vs-healthy-food-4k-animation-is-used_48054714.mp4')">
+                    <video
+                        src="vecteezy_comparison-junk-food-vs-healthy-food-4k-animation-is-used_48054714.mp4">
+                    </video>
+                </li>
+                <li onclick="videoslider('vecteezy_young-man-looking-apple-with-shopping-cart-on-alpha-channel_36557485.mp4')">
+                    <video
+                        src="vecteezy_young-man-looking-apple-with-shopping-cart-on-alpha-channel_36557485.mp4">
+                    </video>
+                </li>
+                <li onclick="videoslider('animation.mp4')">
+                    <video
+                        src="animation.mp4">
+                <li onclick="videoslider('animation2.mp4')">
+                            <video
+                                src="animation2.mp4">
+                    </video>
+                </li>
+            </ul>
+        </div>
+        <script>
+            function videoslider(links) {
+                document.querySelector(".slider").src = links;
+            }
+        </script>
+    </body>
+        </div>
+    </section>
+        <div class="plan-cards container">
+            <a href="nutritionalplan.html" >
+            <div class="plan-card" >
+                <h3>Bulking Plans</h3>
+                <p>High-calorie, protein-rich meals designed to build muscle mass and strength.</p>
+            </div>
+        </a>
+        <a href="nutritionalplan.html" >
+            <div class="plan-card">
+               
+                <h3>Cutting Plans</h3>
+                <p>Low-calorie, nutrient-dense plans to burn fat and retain lean muscle.</p>
+            </div>
+        </a>
+        <a href="nutritionalplan.html" >
+            <div class="plan-card">
+                <h3>Maintenance Plans</h3>
+                <p>Balanced meals to maintain a healthy weight and keep you energized.</p>
+            </div>
+        </a>
+        </div>
+    </section>
+    <h2 class="table-title">Daily Nutritional Plan for Average Human</h2>
+        <table class = "plan-card" border ="6" cellpadding="15" cellspacing="10">
+            <thead class="table-head"
+                <tr>
+                    <th>Nutrients</th>
+                    <th>Non-Vegetarian</th>
+                    <th>Vegetarian</th>
+                    <th>Vegan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Calories</td>
+                    <td>2000 - 2500 kcal</td>
+                    <td>1800 - 2200 kcal</td>
+                    <td>1800 - 2200 kcal</td>
+                </tr>
+                <tr>
+                    <td>Protein</td>
+                    <td>50 - 70g (Chicken, Fish, Eggs)</td>
+                    <td>45 - 65g (Legumes, Dairy)</td>
+                    <td>45 - 65g (Legumes, Tofu, Tempeh)</td>
+                </tr>
+                <tr>
+                    <td>Carbohydrates</td>
+                    <td>250 - 300g (Rice, Bread, Vegetables)</td>
+                    <td>250 - 300g (Rice, Potatoes, Fruits)</td>
+                    <td>250 - 300g (Whole Grains, Vegetables, Fruits)</td>
+                </tr>
+                <tr>
+                    <td>Fats</td>
+                    <td>65 - 80g (Meat, Dairy, Nuts)</td>
+                    <td>60 - 70g (Nuts, Seeds, Dairy)</td>
+                    <td>60 - 70g (Nuts, Seeds, Avocados)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <section class="nutrition-search">
+        <h1>Find Nutrition Information</h1>
+        <div class="search-form">
+          <input
+            type="text"
+            id="food-name-input"
+            placeholder="Enter food item..."
+            required
+          />
+          <a href="api_explore.html">
+          <button id="fetch-data-btn" class="btn-primary">Search</button>
+        </a>
+        </div>
+        <div id="nutrition-result" class="nutrition-result">
+        </div>
+      </section>
+      <section id="nutrition-plan-upload" class="plan-card">
+        <h2>Upload Your Current Nutrition Plan</h2>
+        <form id="plan-upload-form">
+          <p>
+            <label for="plan-name">Plan Name:</label>
+            <input type="text" id="plan-name" name="plan-name" required />
+          </p>
+          <p>
+            <label for="plan-description">Description:</label>
+            <textarea
+              id="plan-description"
+              name="plan-description"
+              required
+            ></textarea>
+          </p>
+          <p>
+            <label for="plan-file-upload"
+              >Upload Nutrition Plan (PDF, JPG, PNG):</label
+            >
+            <input
+              type="file"
+              id="plan-file-upload"
+              name="plan-file-upload"
+              required
+            />
+          </p>
+          <button type="submit" class="btn-primary">Submit Plan</button>
+        </form>
+        <p id="upload-message" class="hidden"></p>
+      </section>
+    <div class="container">
+        <section id="feedback" class="ask-away">
+            <h2>Ask Away!</h2>
+            <form id="feedback-form">
+                <p>
+                <label for="user-name">Name:</label>
+                <input type="text" id="user-name" name="user-name" required>
+                </p>
+                <label for="user-email">Email:</label>
+                <input type="email" id="user-email" name="user-email" required>
+                <p>
+                <label for="user-message">Message:</label>
+                <textarea id="user-message" name="user-message" required></textarea>
+                </textarea>
+                </p>
+                <button type="submit" class="btn-primary" > Submit</button>
+            </form>
+                <p id="feedback-message" class="hidden"></p>
+        </section>
+        <section id="calculator" class="ask-away">
+            <h2>Nutrition Calculator</h2>
+            <form id="calorie-calculator">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+                
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" required>
+              
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+              
+                <label for="activity-level">Activity Level:</label>
+                <select id="activity-level" name="activity-level" required>
+                    <option value="1.2">Sedentary</option>
+                    <option value="1.375">Lightly active</option>
+                    <option value="1.55">Moderately active</option>
+                    <option value="1.725">Very active</option>
+                    <option value="1.9">Super active</option>
+                </select>
+                
+                <button type="submit" class="btn-primary">Calculate</button>
+            </form>
+            <p id="calorie-result" class="hidden"></p>
+        </section>
+        <section id="faq" class="plan-card">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3 class="faq-question">What is DietCo?</h3>
+                <div class="faq-answer hidden">
+                    <p>The DietCo Nutrition Plans website is a comprehensive platform designed to offer personalized nutrition plans based on individual dietary preferences and fitness goals.
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How do I get started?</h3>
+                <div class="faq-answer hidden">
+                    <p>You can start by filling out our questionnaire to assess your needs.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    </body>
+    </html>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+    </section>
+    <footer class=".down">
+        <p>&copy; 2024 DietCo. All rights reserved.</p>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+</html>
