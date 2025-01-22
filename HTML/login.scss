@@ -1,0 +1,78 @@
+$color_1: white;
+$color_2: orange;
+$font-family_1: Arial, sans-serif;
+$background-color_1: #f4f4f4;
+$background-color_2: #fff;
+$background-color_3: orange;
+$background-color_4: orange;
+$border-color_1: orange;
+
+body {
+	font-family: $font-family_1;
+	background-color: $background-color_1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+.login-container {
+	background-color: $background-color_2;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	text-align: center;
+}
+h2 {
+	margin-bottom: 1.5rem;
+}
+label {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+input[type="email"] {
+	width: 100%;
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	&:focus {
+		border-color: $border-color_1;
+		outline: none;
+	}
+}
+input[type="password"] {
+	width: 100%;
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	&:focus {
+		border-color: $border-color_1;
+		outline: none;
+	}
+}
+.btn-primary {
+	background-color: $background-color_3;
+	color: $color_1;
+	padding: 0.7rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	width: 100%;
+	&:hover {
+		background-color: $background-color_4;
+	}
+}
+.redirect {
+	margin-top: 1rem;
+	a {
+		color: $color_2;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
